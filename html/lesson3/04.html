@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hover()</title>
+
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("#p1").hover(function(){
+               $("#p1").html("你进入了p1!");
+               alert("你进入了p1!");
+
+           },
+           function(){
+               $("#p1").html("拜拜! 现在你离开了 p1!");
+               alert("拜拜! 现在你离开了 p1!");
+
+
+           });
+        });
+    </script>
+</head>
+<body>
+
+<div id="p1" style="width: 100%;height: 50px;background-color: #77CCFF">
+
+</div>
+
+</body>
+</html>

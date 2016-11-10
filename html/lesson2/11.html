@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选取所有 target 属性值等于 "_blank" 的a 元素</title>
+
+    <script src="../../js/jquery-3.1.0.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("a[target='_blank']").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<h2>这是标题</h2>
+<p>这是一个段落。</p>
+<p>这是另外一个段落。</p>
+<p><a href="http://www.runoob.com/html/" target="_blank">HTML 教程</a></p>
+<p><a href="http://www.runoob.com/css/">CSS 教程</a></p>
+<button>点我</button>
+
+</body>
+</html>

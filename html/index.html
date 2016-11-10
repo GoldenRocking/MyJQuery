@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSStudy</title>
+
+    <style>
+        body,div,dl,dt,dd{
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link,a:visited{
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        #header{
+            text-align: center;
+            padding: 40px;
+            font-size: 3em;
+        }
+
+        #wrap{
+            width: 350px;
+            background: #FFF;
+            border: 12px solid #EEE;
+            border-radius: 10px;
+            margin: 10px auto 0;
+            padding: 5px 5px 4px;
+        }
+
+        #wrap dl{
+            color: #FFF;
+            overflow: hidden;
+            background: #7CF;
+        }
+
+        #wrap dt,#wrap dd{
+            padding-left:15px;
+            border-bottom:1px solid #FFF;
+        }
+        #wrap dt{
+            cursor:pointer;
+            font-size:14px;
+            background:#9C0;
+            line-height:30px;
+            font:700 14px/30px Tahoma;
+        }
+        #wrap dt.current{
+            background:#09F;
+        }
+        #wrap dd{
+            background:#7CF;
+            line-height:25px;
+            font:12px/25px Tahoma;
+        }
+        #copyright{color:#999;
+            width:374px;
+            text-align:right;
+            font:12px/1.5 Tahoma;
+            margin:5px auto 0;
+        }
+    </style>
+
+    <script src="../js/CreateList.js"></script>
+    <script>
+        window.onload = function() {
+            new CreateList([
+                {
+                    project: [{
+                        text: "第一篇-简介"
+                    },
+                        {
+                            text: "jquery简介",
+                            href: "lesson1/01.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第二篇-选择器"
+                    },
+                        {
+                            text: "基于元素名选取元素",
+                            href: "lesson2/01.html"
+                        },
+                        {
+                            text: "id 选择器",
+                            href: "lesson2/02.html"
+                        },
+                        {
+                            text: "class 选择器",
+                            href: "lesson2/03.html"
+                        },
+                        {
+                            text: "$('*')选取所有元素",
+                            href: "lesson2/04.html"
+                        },
+                        {
+                            text: "$(this) 选取当前 HTML 元素",
+                            href: "lesson2/05.html"
+                        },
+                        {
+                            text: "$('p.intro') 选取class为intro的p元素",
+                            href: "lesson2/06.html"
+                        },
+                        {
+                            text: "$('p:first') 选取第一个p元素",
+                            href: "lesson2/07.html"
+                        },
+                        {
+                            text: "$('ul li:first') 选取第一个ul元素的第一个li元素",
+                            href: "lesson2/08.html"
+                        },
+                        {
+                            text: "$('ul li:first-child') 选取每个ul元素的第一个li元素",
+                            href: "lesson2/09.html"
+                        },
+                        {
+                            text: "$('[href]') 选取带有 href 属性的元素",
+                            href: "lesson2/10.html"
+                        },
+                        {
+                            text: "选取所有 target 属性值等于 '_blank' 的a元素",
+                            href: "lesson2/11.html"
+                        },
+                        {
+                            text: "选取所有 target 属性值不等于 '_blank'的a元素",
+                            href: "lesson2/12.html"
+                        },
+                        {
+                            text: "$(':button') 选取所有 type='button'的input元素 和button元素",
+                            href: "lesson2/13.html"
+                        },
+                        {
+                            text: " $('tr:even')选取偶数位置的tr元素",
+                            href: "lesson2/14.html"
+                        },
+                        {
+                            text: " $('tr:odd')选取奇数位置的tr元素",
+                            href: "lesson2/15.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第三篇-事件"
+                    },
+                        {
+                            text: "click() 点击事件",
+                            href: "lesson3/01.html"
+                        },
+                        {
+                            text: "dblclick()  双击事件",
+                            href: "lesson3/02.html"
+                        },
+                        {
+                            text: " 鼠标事件",
+                            href: "lesson3/03.html"
+                        },
+                        {
+                            text: "hover() 事件",
+                            href: "lesson3/04.html"
+                        },
+                        {
+                            text: "焦点 事件",
+                            href: "lesson3/05.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第四篇-效果"
+                    },
+                        {
+                            text: "隐藏／显示",
+                            href: "lesson4/01.html"
+                        },
+                        {
+                            text: "淡入淡出",
+                            href: "lesson4/02.html"
+                        },
+                        {
+                            text: "滑动",
+                            href: "lesson4/03.html"
+                        },
+                        {
+                            text: "动画",
+                            href: "lesson4/04.html"
+                        },
+                        {
+                            text: "停止动画",
+                            href: "lesson4/05.html"
+                        },
+                        {
+                            text: "Callback",
+                            href: "lesson4/06.html"
+                        },
+                        {
+                            text: "Chaining",
+                            href: "lesson4/07.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第五篇-HTML"
+                    },
+                        {
+                            text: "捕获",
+                            href: "lesson5/01.html"
+                        },
+                        {
+                            text: "设置",
+                            href: "lesson5/02.html"
+                        },
+                        {
+                            text: "添加元素",
+                            href: "lesson5/03.html"
+                        },
+                        {
+                            text: "删除元素",
+                            href: "lesson5/04.html"
+                        },
+                        {
+                            text: "CSS类",
+                            href: "lesson5/05.html"
+                        },
+                        {
+                            text: "css() 方法",
+                            href: "lesson5/06.html"
+                        },
+                        {
+                            text: "尺寸",
+                            href: "lesson5/07.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第六篇-遍历"
+                    },
+                        {
+                            text: "遍历",
+                            href: "lesson6/01.html"
+                        },
+                        {
+                            text: "祖先",
+                            href: "lesson6/02.html"
+                        },
+                        {
+                            text: "后代",
+                            href: "lesson6/03.html"
+                        },
+                        {
+                            text: "同胞",
+                            href: "lesson6/02.html"
+                        },
+                        {
+                            text: "过滤",
+                            href: "lesson6/03.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第七篇-AJAX"
+                    },
+                        {
+                            text: "AJAX 简介",
+                            href: "lesson7/01.html"
+                        },
+                        {
+                            text: "load 方法",
+                            href: "lesson7/02.html"
+                        },
+                        {
+                            text: "get()/post()方法",
+                            href: "lesson7/03.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第八篇-其它"
+                    },
+                        {
+                            text: "noConflict()方法",
+                            href: "lesson8/01.html"
+                        },
+                        {
+                            text: "JSONP",
+                            href: "lesson8/02.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第九篇"
+                    },
+                        {
+                            text: "XXXX",
+                            href: "lesson9/01.html"
+                        },
+                        {
+                            text: "XXX",
+                            href: "lesson9/02.html"
+                        },
+                        {
+                            text: "XXX",
+                            href: "lesson9/03.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "第十篇"
+                    },
+                        {
+                            text: "YYY",
+                            href: "lesson10/01.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/02.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/03.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/04.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/05.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/06.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/07.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/08.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/09.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/10.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/11.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/12.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/13.html"
+                        },
+                        {
+                            text: "YYY",
+                            href: "lesson10/14.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "项目实例"
+                    },
+                        {
+                            text: "ZZZ",
+                            href: "lesson11/01.html"
+                        },
+                        {
+                            text: "ZZZ",
+                            href: "lesson11/02.html"
+                        },
+                        {
+                            text: "ZZZ",
+                            href: "lesson11/03.html"
+                        },
+                        {
+                            text: "ZZZ",
+                            href: "lesson11/04.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "JavaScript练习"
+                    },
+                        {
+                            text: "JavaScript Exercise: #1",
+                            href: "exercise/01.html"
+                        },
+                        {
+                            text: "JavaScript Exercise: #2",
+                            href: "exercise/02.html"
+                        },
+                        {
+                            text: "JavaScript Exercise: #3",
+                            href: "exercise/03.html"
+                        },
+                        {
+                            text: "JavaScript Exercise: #4",
+                            href: "exercise/04.html"
+                        },
+                        {
+                            text: "Html5 touchmove",
+                            href: "exercise/05.html"
+                        },
+                        {
+                            text: "AAA",
+                            href: "exercise/06.html"
+                        },
+                        {
+                            text: "AAA",
+                            href: "exercise/07.html"
+                        }]
+                },
+                {
+                    project: [{
+                        text: "WebChat"
+                    },
+                        {
+                            text: "BBB",
+                            href: "webChat/01.html"
+                        }]
+                }
+            ]);
+            (function() {
+                var oDiv = document.createElement("div");
+                oDiv.style.width = "384px";
+                oDiv.style.textAlign = "right";
+                oDiv.style.margin = "5px auto 10px";
+                document.body.appendChild(oDiv)
+            })()
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

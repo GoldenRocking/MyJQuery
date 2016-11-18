@@ -38,6 +38,25 @@
                 $("#w3s").attr("href","http://www.sina.com.cn");
             });
 
+            //attr() 方法也允许您同时设置多个属性
+            /*
+             $("btn6").click(function(){
+             $("#w3s").attr({
+             "href" : "http://www.sina.com.cn",
+             "title" : "http://www.sina.com.cn"
+             });
+             });
+
+             */
+
+            //jQuery 方法 attr()，也提供回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。
+
+            $("btn7").click(function(){
+                $("#w3s2").attr("href", function(i,origValue){
+                    return origValue + "/12345";
+                });
+            });
+
         });
     </script>
 </head>
@@ -62,6 +81,12 @@
 <div>
     <p><a href="https://www.baidu.com" id="w3s">This is a href</a></p>
     <button id="btn6">改变 href 值</button>
+    <p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值。</p>
+</div>
+
+<div>
+    <p><a href="https://www.baidu.com" id="w3s2">This is a href</a></p>
+    <button id="btn7">改变 href 值</button>
     <p>请把鼠标指针移动到链接上，或者点击该链接，来查看已经改变的 href 值。</p>
 </div>
 

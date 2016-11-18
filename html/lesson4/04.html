@@ -3,8 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>动画</title>
+
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+               $("#div1").animate({left:'250px'});
+            });
+
+            $("#btn2").click(function(){
+               $("#div2").animate({
+                   left:'250px',
+                   opacity:'0.5',
+                   height:'150px',
+                   width:'150px'
+               });
+            });
+
+            $("#btn3").click(function(){
+                $("#div3").animate({
+                    left:'250px',
+                    height:'+=150px',
+                    width:'+=150px'
+                });
+            });
+
+            $("#btn4").click(function(){
+                $("#div4").animate({
+                    height:'toggle'
+                });
+            });
+
+            $("#btn5").click(function(){
+                var div = $("#div5");
+                div.animate({height:'300px',opacity:'0.4'},"slow");
+                div.animate({width:'300px',opacity:'0.8'},"slow");
+                div.animate({height:'100px',opacity:'0.4'},"slow");
+                div.animate({width:'100px',opacity:'0.8'},"slow");
+            });
+
+            $("#btn6").click(function(){
+                var div = $("#div6");
+                div.animate({left:'100px'},"slow");
+                div.animate({fontSize:'3em'},"slow");
+
+            });
+
+
+        });
+    </script>
+
 </head>
 <body>
+<div>
+<button id="btn1">开始动画1</button>
+<p>默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。</p>
+<div id="div1" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+</div>
+<br>
+<div style="margin-top: 10px">
+<button id="btn2" style="margin-top: 100px">开始动画2</button>
+<div id="div2" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+</div>
+<div style="margin-top: 10px">
+<button id="btn3" style="margin-top: 100px">开始动画3</button>
+<div id="div3" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+</div>
+
+<div style="margin-top: 10px">
+    <button id="btn4" style="margin-top: 100px">开始动画4</button>
+    <div id="div4" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+    </div>
+</div>
+
+<div style="margin-top: 10px">
+    <button id="btn5" style="margin-top: 100px">开始动画5</button>
+    <div id="div5" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+    </div>
+</div>
+
+<div style="margin-top: 10px">
+    <button id="btn6" style="margin-top: 100px">开始动画6</button>
+    <div id="div6" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+</div>
 
 </body>
 </html>

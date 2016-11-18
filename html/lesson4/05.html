@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stop</title>
+
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown(5000);
+            });
+            $("#stop1").click(function(){
+                $("#panel").stop();
+            });
+
+            $("#start").click(function(){
+                $("#div2").animate({left:'100px'},5000);
+                $("#div2").animate({fontSize:'3em'},5000);
+            });
+
+            $("#stop").click(function(){
+                $("#div2").stop();
+            });
+
+            $("#stop2").click(function(){
+                $("#div2").stop(true);
+            });
+
+            $("#stop3").click(function(){
+                $("#div2").stop(true,true);
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        #panel,#flip
+        {
+            padding:5px;
+            text-align:center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #panel
+        {
+            padding:50px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button id="stop1">停止滑动</button>
+    <div id="flip">点击这里，向下滑动面板</div>
+    <div id="panel">Hello world!</div>
+</div>
+<div  style="margin-top: 50px">
+    <button id="start">开始</button>
+    <button id="stop">停止</button>
+    <button id="stop2">停止所有</button>
+    <button id="stop3">停止但要完成</button>
+    <p><b>"开始"</b> 按钮会启动动画。</p>
+    <p><b>"停止"</b> 按钮会停止当前活动的动画，但允许已排队的动画向前执行。</p>
+    <p><b>"停止所有"</b> 按钮停止当前活动的动画，并清空动画队列；因此元素上的所有动画都会停止。</p>
+    <p><b>"停止但要完成"</b> 会立即完成当前活动的动画，然后停下来。</p>
+
+    <div id="div2" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+
+
+</div>
+
+</body>
+</html>

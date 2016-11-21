@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同胞</title>
+
+    <style>
+        .siblings *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+
+                $("#h2h").siblings().css({"color":"red","border":"2px solid red"});
+            });
+
+            $("#btn2").click(function(){
+
+                $("#h2h").siblings("p").css({"color":"red","border":"2px solid red"});
+            });
+
+            $("#btn3").click(function(){
+
+                $("#h2h").next().css({"color":"red","border":"2px solid red"});
+            });
+
+            $("#btn4").click(function(){
+
+                $("#h2h").nextAll().css({"color":"red","border":"2px solid red"});
+            });
+
+            $("#btn5").click(function(){
+
+                $("#h2h").nextUntil("h6").css({"color":"red","border":"2px solid red"});
+            });
+        });
+
+        /*
+           prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似
+         ，只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。
+         */
+
+
+    </script>
+</head>
+<body>
+<div class="siblings">
+<div id="div1">div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2 id="h2h">h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <p>p</p>
+</div>
+</div>
+<button id="btn1">所有同胞元素</button>
+<button id="btn2">所有同胞元素中的p元素</button>
+<button id="btn3">h2元素的下一个元素</button>
+<button id="btn4">h2元素的所有跟随的同胞元素</button>
+
+<button id="btn5">返回介于h2与h6元素之间的所有同胞元素</button>
+
+</body>
+</html>

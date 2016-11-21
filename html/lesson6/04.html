@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤</title>
+
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("div p").first().css("background-color","yellow");
+            });
+
+            $("#btn2").click(function(){
+                $("div p").last().css("background-color","yellow");
+            });
+
+            $("#btn3").click(function(){
+                $(".p1").eq(1).css("background-color","yellow");
+            });
+
+            $("#btn4").click(function(){
+                $("p").filter(".intro").css("background-color","yellow");
+            });
+
+            $("#btn5").click(function(){
+                $("p").not(".intro").css("background-color","yellow");
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+<div>
+
+    <h1>欢迎来到我的主页</h1>
+    <div>
+        <p>这是 div 中的一个段落。</p>
+    </div>
+
+    <div>
+        <p>这是 div 中的另一个段落。</p>
+    </div>
+
+    <p>这也是段落。</p>
+
+    <button id="btn1">选取首个div元素内部的第一个p元素</button>
+    <button id="btn2">选择最后一个div元素中的最后一个p元素</button>
+</div>
+
+<div>
+    <h1>欢迎来到我的主页</h1>
+    <p class="p1">我是唐老鸭 (index 0)。</p>
+    <p class="p1 intro">唐老鸭 (index 1)。</p>
+    <p class="p1 intro">我住在 Duckburg (index 2)。</p>
+    <p class="p1">我最好的朋友是米老鼠 (index 3)。</p>
+    <button id="btn3">返回被选元素中带有指定索引号的元素</button>
+    <button id="btn4">返回匹配的元素</button>
+    <button id="btn5">返回不匹配的元素</button>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>祖先</title>
+
+    <style>
+        .ancestors *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".span1").parent().css({"color":"red","border":"2px solid red"});
+            });
+
+            $("#btn2").click(function(){
+                $(".span2").parents().css({"color":"red","border":"2px solid red"});
+            });
+
+            $("#btn3").click(function(){
+                $(".span3").parents("ul").css({"color":"red","border":"2px solid red"});
+            });
+
+            $("#btn4").click(function(){
+                $(".span4").parentsUntil("div").css({"color":"red","border":"2px solid red"});
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div class="ancestors">
+    <div style="width:500px;">div (曾祖父)
+        <ul>ul (祖父)
+            <li>li (直接父)
+                <span class="span1">span</span>
+            </li>
+        </ul>
+    </div>
+
+    <div style="width:500px;">div (祖父)
+        <p>p (直接父)
+            <span class="span1">span</span>
+        </p>
+    </div>
+</div>
+<button id="btn1">直接父元素</button>
+
+<br>
+<br>
+<div class="ancestors">body (曾曾祖父)
+<div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)
+        <li>li (直接父)
+            <span class="span2">span</span>
+        </li>
+    </ul>
+</div>
+</div>
+<button id="btn2">所有父元素</button>
+
+<br>
+<br>
+<div class="ancestors">body (曾曾祖父)
+<div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)
+        <li>li (直接父)
+            <span class="span3">span</span>
+        </li>
+    </ul>
+</div>
+</div>
+<button id="btn3">所有父元素中为ul的元素</button>
+<br>
+<br>
+<div class="ancestors"> body (曾曾祖父)
+<div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)
+        <li>li (直接父)
+            <span class="span4">span</span>
+        </li>
+    </ul>
+</div>
+</div>
+<button id="btn4">介于span与div之间的所有祖先元素</button>
+
+
+</body>
+</html>
